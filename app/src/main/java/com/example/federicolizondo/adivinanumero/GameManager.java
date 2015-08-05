@@ -73,6 +73,7 @@ public class GameManager {
             do {
                 u = (int) ((Math.random() * 10) % 10);
             } while (u == um || u == c || u == d);
+            aux = convertirANumero(um, c, d, u);
         }
         return aux;
     }
