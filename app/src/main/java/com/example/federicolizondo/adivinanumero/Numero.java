@@ -42,7 +42,7 @@ public class Numero {
         ////////////////////////////////////////////////////////////
         if (decena == vDecena)
             bien++;
-        else if (decena == vUnidad || decena == vCentena || decena == vUnidad)
+        else if (decena == vUnidadDeMil || decena == vCentena || decena == vUnidad)
             regular++;
         ////////////////////////////////////////////////////////////
         if (unidad == vUnidad)
