@@ -99,7 +99,9 @@ public class GameManager {
 
 /*  public void guardarEnBD()
     {
-        Guardaria el estado actual para recuperar en caso de salir
+        //Guardaria el estado actual para recuperar en caso de salir
+        //Mejor Pongo los Scores :D
+        //que DIA , Con que Numero y con
     }
 */
 
