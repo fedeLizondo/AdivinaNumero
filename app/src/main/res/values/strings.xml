@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">AdivinaNumero</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="juegoNuevo">Juego Nuevo</string>
+    <string name="continuarJuego">Continuar</string>
+    <string name="instrucciones">Instrucciones</string>
+    <string name="puntaje">Puntajes</string>
+    <string name="salir">Salir</string>
+    <string name="nombreJuego"> Ganzúa </string>
+    <string name="title_activity_instrucciones">InstruccionesActivity</string>
+    <string name="volver">Volver</string>
 </resources>
