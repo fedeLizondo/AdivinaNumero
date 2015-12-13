@@ -10,4 +10,30 @@
     <string name="nombreJuego"> Ganzúa </string>
     <string name="title_activity_instrucciones">InstruccionesActivity</string>
     <string name="volver">Volver</string>
+    <string name="title_activity_score">ScoreActivity</string>
+    <string name="VerficarClave">Verficar Clave</string>
+    <string name="wInstruccion">
+        Se debe encontrar un número de 4 dígitos. \n\n
+        El numero esta comprendido entre 1024 y 9876. \n\n
+        Los 4 dígitos deben ser diferentes entre si. \n\n
+        Por cada dígito en el lugar correcto se le indicara como un BIEN \n\n
+        Por cada dígito perteneciente a los 4 dígitos del numero ,pero en el lugar incorrecto se indicara como un regular\n\n
+        No hay limite de tiempo.</string>
+
+    <string name="flechaArriba">▲</string>
+    <string name="flechaAbajo">▼</string>
+    <string name="flechaArribaBordesSolos">△</string>
+    <string name="flechaAbajoBordesSolos">▽</string>
+
+    <string name="title_activity_game">gameActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="valorIncialUnidadMil">1</string>
+    <string name="valorIncialCentena">0</string>
+    <string name="valorIncialDecena">2</string>
+    <string name="valorIncialUnidad">4</string>
+
+
 </resources>
