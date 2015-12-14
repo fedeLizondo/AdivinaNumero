@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class InstruccionesActivity extends ActionBarActivity {
@@ -35,4 +36,9 @@ public class InstruccionesActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void volverInstrucciones(View view) {
+        this.finish();
+    }
+
 }

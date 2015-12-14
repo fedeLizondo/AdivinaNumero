@@ -63,6 +63,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:onClick="volverPuntajes"
             android:text="@string/volver" />
 
 

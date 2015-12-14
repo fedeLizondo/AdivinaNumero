@@ -28,7 +28,7 @@
             android:gravity="center"
             android:text="@string/nombreJuego"
             android:textColor="#BFFFFFFF"
-            android:textSize="@dimen/abc_text_size_headline_material" />
+            android:textSize="56dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:text="@string/instrucciones"
             android:textColor="#d5000000"
-            android:textSize="@dimen/abc_text_size_subhead_material" />
+            android:textSize="48dp" />
 
         <TextView
 
@@ -52,7 +52,7 @@
             android:background="#0F000000"
             android:scrollbars="vertical"
             android:text="@string/wInstruccion"
-            android:textSize="14sp"
+            android:textSize="36sp"
 
             android:textStyle="bold"
             android:typeface="normal" />
@@ -64,6 +64,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
-            android:text="@string/volver" />
+            android:onClick="volverInstrucciones"
+            android:text="@string/volver"
+            android:textSize="48sp" />
     </LinearLayout>
 </RelativeLayout>

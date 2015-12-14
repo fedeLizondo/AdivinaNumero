@@ -26,6 +26,25 @@ public class GameManager {
         this.win = false;
     }
 
+    //METODOS STATICOS
+    public static int convertirANumero(int unidadMil, int centena, int decena, int unidad) {
+        return unidadMil * 1000 + centena * 100 + decena * 10 + unidad;
+    }
+
+    public static int[] convertirAUnidades(int nro) {
+        int[] aNro = new int[4];
+        //unidad
+        aNro[3] = nro % 10;
+        //decena
+        aNro[2] = (nro % 100 - aNro[3]) / 10;
+        //centena
+        aNro[1] = (nro % 1000 - (aNro[2] * 10 + aNro[3])) / 100;
+        //unidad de Mil
+        aNro[0] = (nro - aNro[1] * 100 + aNro[2] * 10 + aNro[3]) / 1000;
+        return aNro;
+    }
+    //-----Getters and Setters
+
     //Metodos publicos
     public void intento(Numero n) {
         n.verificar(unidadMil, centena, decena, unidad);
@@ -36,12 +55,11 @@ public class GameManager {
     public boolean estaIngresado(int unidadMil, int centena, int decena, int unidad) {
         int size = lNumeros.size(),
                 cont = 0;
-        while (cont < size && lNumeros.get(cont).sosElNumero(unidadMil, centena, decena, unidad)) {
+        while (cont < size && !lNumeros.get(cont).sosElNumero(unidadMil, centena, decena, unidad)) {
             cont++;
         }
         return (cont < size);
     }
-    //-----Getters and Setters
 
     public int darNumero() {
         return convertirANumero(this.unidadMil, this.centena, this.decena, this.unidad);
@@ -51,8 +69,15 @@ public class GameManager {
         return win;
     }
 
-
     //METODOS PRIVADOS
+
+    public int cantidadIntentos() {
+        return lNumeros.size();
+    }
+
+    public ArrayList<Numero> darListaNumeros() {
+        return (ArrayList<Numero>) lNumeros.clone();
+    }
 
     private int nroRandom() {
         int um = 0,
@@ -76,24 +101,6 @@ public class GameManager {
             aux = convertirANumero(um, c, d, u);
         }
         return aux;
-    }
-
-    //METODOS STATICOS
-    public static int convertirANumero(int unidadMil, int centena, int decena, int unidad) {
-        return unidadMil * 1000 + centena * 100 + decena * 10 + unidad;
-    }
-
-    public static int[] convertirAUnidades(int nro) {
-        int[] aNro = new int[3];
-        //unidad
-        aNro[3] = nro % 10;
-        //decena
-        aNro[2] = (nro % 100 - aNro[3]) / 10;
-        //centena
-        aNro[1] = (nro % 1000 - (aNro[2] * 10 + aNro[3])) / 100;
-        //unidad de Mil
-        aNro[0] = (nro - aNro[1] * 100 + aNro[2] * 10 + aNro[3]) / 1000;
-        return aNro;
     }
 
 

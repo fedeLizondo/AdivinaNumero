@@ -18,13 +18,16 @@
         </activity>
         <activity
             android:name=".ScoreActivity"
-            android:label="@string/title_activity_score"></activity>
+            android:label="@string/title_activity_score" />
         <activity
             android:name=".gameActivity"
-            android:label="@string/title_activity_game"></activity>
+            android:label="@string/title_activity_game" />
         <activity
             android:name=".InstruccionesActivity"
-            android:label="@string/title_activity_instrucciones"></activity>
+            android:label="@string/title_activity_instrucciones" />
+        <activity
+            android:name=".ingresarNombreActivity"
+            android:label="@string/title_activity_ingresar_nombre"></activity>
     </application>
 
 </manifest>

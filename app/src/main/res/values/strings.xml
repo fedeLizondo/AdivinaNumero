@@ -14,10 +14,10 @@
     <string name="VerficarClave">Verficar Clave</string>
     <string name="wInstruccion">
         Se debe encontrar un número de 4 dígitos. \n\n
-        El numero esta comprendido entre 1024 y 9876. \n\n
+        El número esta comprendido entre 1024 y 9876. \n\n
         Los 4 dígitos deben ser diferentes entre si. \n\n
         Por cada dígito en el lugar correcto se le indicara como un BIEN \n\n
-        Por cada dígito perteneciente a los 4 dígitos del numero ,pero en el lugar incorrecto se indicara como un regular\n\n
+        Por cada dígito perteneciente a los 4 dígitos del número ,pero en el lugar incorrecto se indicara como un regular\n\n
         No hay limite de tiempo.</string>
 
     <string name="flechaArriba">▲</string>
@@ -25,9 +25,12 @@
     <string name="flechaArribaBordesSolos">△</string>
     <string name="flechaAbajoBordesSolos">▽</string>
 
-    <string name="title_activity_game">gameActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
+    <string name="IngreseNombre">Ingrese nombre</string>
+    <string name="BtnAceptar">Aceptar</string>
+
+    <string name="title_activity_game">Ganzua</string>
+    <string name="title_section1">Ingresar Número</string>
+    <string name="title_section2">Ver Números Ingresados</string>
     <string name="title_section3">Section 3</string>
 
     <string name="valorIncialUnidadMil">1</string>
@@ -35,5 +38,23 @@
     <string name="valorIncialDecena">2</string>
     <string name="valorIncialUnidad">4</string>
 
+    <string name="title_activity_ingresar_nombre">Ingrese Nombre</string>
+
+    <string name="valoresRepetidos"> Hay unidades Repetidas\n
+                                     Ver valores resaltados en rojo
+    </string>
+    <string name="valoresMayores">El número ingresado debe ser menor o igual a 9876</string>
+    <string name="valoresMenores">El número ingresado debe ser mayor o igual a 1024</string>
+    <string name="numerosDuplicados">El número ingresado es un numero ya repetido</string>
+    <string name="ganaste">Ganaste !!! el número era </string>
+    <string name="ganasteII"> y en tan solo </string>
+    <string name="ganasteIIIunIntento"> intento </string>
+    <string name="ganasteIIIvariosIntentos"> intentos </string>
+    <string name="intento">El número ingresado fue </string>
+    <string name="intentoII"> y has tenido </string>
+    <string name="intentoBien"> Bien </string>
+    <string name="intentoY"> Y </string>
+    <string name="intentoRegular"> Regular </string>
+    <string name="darsePorVencido">El número era </string>
 
 </resources>

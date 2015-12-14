@@ -27,7 +27,7 @@
             android:gravity="center"
             android:text="@string/nombreJuego"
             android:textColor="#BFFFFFFF"
-            android:textSize="@dimen/abc_text_size_headline_material" />
+            android:textSize="56sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -37,11 +37,12 @@
             android:layout_weight="1"
             android:background="#0F000000"
             android:gravity="center"
-            android:text="@string/instrucciones"
+            android:text="@string/puntaje"
             android:textColor="#d5000000"
-            android:textSize="@dimen/abc_text_size_subhead_material" />
+            android:textSize="48sp" />
 
         <TextView
+            android:id="@+id/Txt_Puntajes"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="4dp"
@@ -49,9 +50,7 @@
             android:layout_weight="7"
             android:background="#0F000000"
             android:scrollbars="vertical"
-            android:text="@string/wInstruccion"
-            android:textSize="18sp"
-
+            android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="normal" />
 
@@ -62,7 +61,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
-            android:text="@string/volver" />
+            android:onClick="volverPuntajes"
+            android:text="@string/volver"
+            android:textSize="48sp" />
 
 
     </LinearLayout>

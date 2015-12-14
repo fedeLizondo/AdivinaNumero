@@ -5,34 +5,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-
-import java.util.ArrayList;
+import android.widget.EditText;
 
 
-public class ScoreActivity extends ActionBarActivity {
-    TextView tv;
+public class ingresarNombreActivity extends ActionBarActivity {
+
+    EditText et;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_ingresar_nombre);
 
-        tv = (TextView) findViewById(R.id.Txt_Puntajes);
-        String aux = "";
-        ArrayList<String> lScores = getIntent().getStringArrayListExtra("Scores");
-        for (String lScore : lScores) {
-            aux += lScore + "\n";
-        }
-        if (aux.isEmpty())
-            aux = "No hay Puntajes disponibles";
-
-        tv.setText(aux);
+        et = (EditText) findViewById(R.id.editTextNombre);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_score, menu);
+        getMenuInflater().inflate(R.menu.menu_ingresar_nombre, menu);
         return true;
     }
 
@@ -51,7 +42,10 @@ public class ScoreActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void volverPuntajes(View view) {
+    public void AceptarNombreUsuario(View view) {
+        String nombre = this.et.getText().toString();
+        getIntent().putExtra("Nombre", nombre);
+        setResult(RESULT_OK, getIntent());
         this.finish();
     }
 

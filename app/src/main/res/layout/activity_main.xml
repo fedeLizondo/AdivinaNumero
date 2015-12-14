@@ -39,6 +39,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:background="#3DFFFFFF"
+            android:onClick="Btn_JuegoNuevo"
             android:text="@string/juegoNuevo" />
 
         <Button
@@ -50,6 +51,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:background="#3DFFFFFF"
+            android:onClick="IniciarScores"
             android:text="@string/puntaje" />
 
         <Button
@@ -60,6 +62,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:background="#3DFFFFFF"
+            android:onClick="IniciarInstrucciones"
             android:text="@string/instrucciones" />
 
         <Button
@@ -70,6 +73,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:background="#3DFFFFFF"
+            android:onClick="Salir"
             android:text="@string/salir" />
 
     </LinearLayout>

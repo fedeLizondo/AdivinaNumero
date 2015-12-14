@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.federicolizondo.adivinanumero.ingresarNombreActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:background="#0F000000"
+        android:gravity="center"
+        android:text="@string/nombreJuego"
+        android:textColor="#BFFFFFFF"
+        android:textSize="56sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/IngreseNombre"
+            android:textSize="48sp" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/border_style"
+            android:inputType="text"
+            android:textSize="48sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:background="#6F00F000"
+        android:onClick="AceptarNombreUsuario"
+        android:text="@string/BtnAceptar"
+        android:textSize="56sp" />
+</RelativeLayout>

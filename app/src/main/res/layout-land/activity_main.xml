@@ -41,6 +41,7 @@
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:onClick="Btn_JuegoNuevo"
             android:text="@string/juegoNuevo" />
 
         <Button
@@ -52,6 +53,7 @@
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:onClick="IniciarScores"
             android:text="@string/puntaje" />
 
         <Button
@@ -63,6 +65,7 @@
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:onClick="IniciarInstrucciones"
             android:text="@string/instrucciones" />
 
         <Button
@@ -74,6 +77,8 @@
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:nestedScrollingEnabled="false"
+            android:onClick="Salir"
             android:text="@string/salir" />
 
     </LinearLayout>

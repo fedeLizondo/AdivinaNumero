@@ -68,7 +68,7 @@ public class Numero {
     }
 
     public String darInfo() {
-        return "Numero: " + this.darNro() + "\nCantidad Bien: " + bien + "\nCantidad Regular:" + regular;
+        return "Número: " + this.darNro() + "\nCantidad Bien: " + bien + "\nCantidad Regular:" + regular;
     }
 
     @Override

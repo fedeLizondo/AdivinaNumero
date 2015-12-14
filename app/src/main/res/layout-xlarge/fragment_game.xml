@@ -51,12 +51,12 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:onClick="bpUM"
+
                     android:text="@string/flechaArriba"
-
                     android:textSize="24sp"
-                    android:textStyle="bold"
 
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/Btn_Up_Centena"
@@ -65,6 +65,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:onClick="bpC"
                     android:text="@string/flechaArriba"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -76,6 +77,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:onClick="bpD"
                     android:text="@string/flechaArriba"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -87,11 +89,12 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:nestedScrollingEnabled="false"
+                    android:onClick="bpU"
                     android:text="@string/flechaArriba"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
 
-                    />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
             </LinearLayout>
             <!-- Fin FLechas Arriba-->
             <LinearLayout
@@ -170,6 +173,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
 
+                    android:onClick="bDownUM"
                     android:text="@string/flechaAbajo"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -182,6 +186,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
 
+                    android:onClick="bDownC"
                     android:text="@string/flechaAbajo"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -193,6 +198,7 @@
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:onClick="bDownD"
                     android:text="@string/flechaAbajo"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -205,6 +211,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
 
+                    android:onClick="bDownU"
                     android:text="@string/flechaAbajo"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -214,14 +221,14 @@
             <Button
                 android:id="@+id/Btn_Probar"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_below="@id/LinearLayout_BotonesDown"
                 android:layout_marginTop="12dp"
                 android:background="#6F00F000"
+                android:onClick="verificarNumero"
                 android:text="@string/VerficarClave"
-                android:textSize="36sp"
 
-                />
+                android:textSize="36sp" />
 
         </RelativeLayout>
         <!-- Fin BUTONERA -->
@@ -233,6 +240,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:background="#3DFFFFFF"
+            android:onClick="volverGameActivity"
             android:text="@string/volver"
             android:textSize="36sp" />
 
