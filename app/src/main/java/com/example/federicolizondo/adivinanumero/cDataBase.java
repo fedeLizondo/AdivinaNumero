@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -32,15 +31,12 @@ public class cDataBase extends SQLiteOpenHelper {
 
 
     public ArrayList<String> cargarDatosScore() {
-        Log.i("", "Entre en Funcion de Cargar datos");
         ArrayList<String> datos = new ArrayList<String>();
-        //TODO borre el desc
         String Consulta = "SELECT * FROM " + TABLE_NAME + " ORDER BY " + COLUMNA_2 + " LIMIT(10);";
         SQLiteDatabase db = this.getWritableDatabase();
         this.getReadableDatabase();
         Cursor res = db.rawQuery(Consulta, null);
         int tam = res.getCount();
-
         if (tam != 0) //Si tengo Algo
         {
             while (res.moveToNext()) {
@@ -58,15 +54,8 @@ public class cDataBase extends SQLiteOpenHelper {
         contentValues.put(COLUMNA_1, nro);
         contentValues.put(COLUMNA_2, cantidadIntentos);
         contentValues.put(COLUMNA_3, nombre);
-        long valorVerdad = 3;
-        try {
-
-            valorVerdad = db.insert(TABLE_NAME, null, contentValues);
-        } catch (Exception e) {
-            Log.e("", e.toString());
-        }
+        long valorVerdad = db.insert(TABLE_NAME, null, contentValues);
         db.close();
-        Log.e("", "El valor de verdad dentro de la funcion " + valorVerdad);
         return (valorVerdad > -1);
 
     }

@@ -23,6 +23,16 @@ import com.example.federicolizondo.adivinanumero.dummy.DummyContent;
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
  */
+
+/**
+ * A fragment representing a list of Items.
+ * <p/>
+ * Large screen devices (such as tablets) are supported by replacing the ListView
+ * with a GridView.
+ * <p/>
+ * Activities containing this fragment MUST implement the {@link Callbacks}
+ * interface.
+ */
 public class NumeroFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -76,14 +86,13 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         // TODO: Change Adapter to display your content
         mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_numero, container, false);
-
+        view.requestLayout();
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);
         mListView.setAdapter(mAdapter);
@@ -97,12 +106,11 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        /*
-        try {
+    /*    try {
             mListener = (OnFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
+                + " must implement OnFragmentInteractionListener");
         }*/
     }
 
@@ -112,12 +120,13 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         mListener = null;
     }
 
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (null != mListener) {
             // Notify the active callbacks interface (the activity, if the
             // fragment is attached to one) that an item has been selected.
-            // mListener.onFragmentInteraction(DummyContent.ITEMS.get(position).id);
+            mListener.onFragmentInteraction(DummyContent.ITEMS.get(position).id);
         }
     }
 
@@ -129,7 +138,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
     public void setEmptyText(CharSequence emptyText) {
         View emptyView = mListView.getEmptyView();
 
-        if (emptyView instanceof TextView) {
+        if (emptyText instanceof TextView) {
             ((TextView) emptyView).setText(emptyText);
         }
     }
@@ -139,7 +148,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
+     * <p>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
@@ -148,5 +157,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         // TODO: Update argument type and name
         void onFragmentInteraction(String id);
     }
+
+
 
 }

@@ -23,11 +23,17 @@ public class DummyContent {
      */
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
-    static {
-        // Add 3 sample items.
-        addItem(new DummyItem("-1", "Item 1"));
-        addItem(new DummyItem("-2", "Item 2"));
-        addItem(new DummyItem("-3", "Item 3"));
+    /*
+        static {
+            // Add 3 sample items.
+            addItem(new DummyItem("1","Contenido 1"));
+            addItem(new DummyItem("2","Contenido 2"));
+            addItem(new DummyItem("3","Contenido 3"));
+        }
+    */
+    public static void removeAllItems() {
+        ITEMS.clear();
+        ITEM_MAP.clear();
     }
 
     private static void addItem(DummyItem item) {
@@ -35,7 +41,7 @@ public class DummyContent {
         ITEM_MAP.put(item.id, item);
     }
 
-    public static void addItems(DummyItem i) {
+    public static void addI(DummyItem i) {
         ITEMS.add(i);
         ITEM_MAP.put(i.id, i);
     }
@@ -45,14 +51,12 @@ public class DummyContent {
      * A dummy item representing a piece of content.
      */
     public static class DummyItem {
-
         public String id;
         public String content;
 
         public DummyItem(String id, String content) {
             this.id = id;
             this.content = content;
-
         }
 
         @Override

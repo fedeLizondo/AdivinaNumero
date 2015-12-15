@@ -124,6 +124,11 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
         return true;
     }
 
+    @Override
+    public void finish() {
+        DummyContent.removeAllItems();
+        super.finish();
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -195,8 +200,7 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
                         texto += n.darCantidadRegular() + this.getString(R.string.intentoRegular);
                         String ContenidoAdapter = nro + " : " + n.darCantidadBien() + " " + this.getString(R.string.intentoBien) + " " + this.getString(R.string.intentoY) + " " + n.darCantidadRegular() + " " + this.getString(R.string.intentoRegular);
                         DummyContent.DummyItem i = new DummyContent.DummyItem(Integer.toString(gm.cantidadIntentos()), ContenidoAdapter);
-                        DummyContent.addItems(i);
-
+                        DummyContent.addI(i);
 
                     }
                 }//Es el Número a adivinar
