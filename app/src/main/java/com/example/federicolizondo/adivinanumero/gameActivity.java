@@ -93,6 +93,8 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
             @Override
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
+
+
             }
         });
 
@@ -141,6 +143,7 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
         if (id == R.id.action_settings) {
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -199,8 +202,12 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
                         texto += n.darCantidadBien() + this.getString(R.string.intentoBien) + this.getString(R.string.intentoY);
                         texto += n.darCantidadRegular() + this.getString(R.string.intentoRegular);
                         String ContenidoAdapter = nro + " : " + n.darCantidadBien() + " " + this.getString(R.string.intentoBien) + " " + this.getString(R.string.intentoY) + " " + n.darCantidadRegular() + " " + this.getString(R.string.intentoRegular);
-                        DummyContent.DummyItem i = new DummyContent.DummyItem(Integer.toString(gm.cantidadIntentos()), ContenidoAdapter);
+                        //DummyContent.DummyItem i = new DummyContent.DummyItem(Integer.toString(gm.cantidadIntentos()), ContenidoAdapter);
+                        //DummyContent.addI(i);
+                        DummyContent.DummyItem i = new DummyContent.DummyItem(Integer.toString(n.darNro()), ContenidoAdapter);
                         DummyContent.addI(i);
+                        if (NumeroFragment.nroFragment != null)
+                            (NumeroFragment.nroFragment).Actualizar();
 
                     }
                 }//Es el Número a adivinar
@@ -337,13 +344,16 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
+
             return fragment;
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.fragment_game, container, false);
+
 
             return rootView;
         }
@@ -369,7 +379,7 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
                 case 0:
                     return PlaceholderFragment.newInstance(position);
                 case 1:
-                    return NumeroFragment.newInstance("aasd", "asdd");
+                    return NumeroFragment.newInstance("asdasd", "asdasd");
                 default:
                     return PlaceholderFragment.newInstance(position + 1);
             }
@@ -389,6 +399,7 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
                 case 0:
                     return getString(R.string.title_section1).toUpperCase(l);
                 case 1:
+
                     return getString(R.string.title_section2).toUpperCase(l);
                 /*case 2:
                     return getString(R.string.title_section3).toUpperCase(l);

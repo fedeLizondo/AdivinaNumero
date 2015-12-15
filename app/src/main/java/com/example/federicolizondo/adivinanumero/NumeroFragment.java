@@ -10,6 +10,7 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.federicolizondo.adivinanumero.dummy.DummyContent;
@@ -22,23 +23,17 @@ import com.example.federicolizondo.adivinanumero.dummy.DummyContent;
  * <p/>
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
- */
+ * DESDE ACA ------------------------------------------------*/
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Large screen devices (such as tablets) are supported by replacing the ListView
- * with a GridView.
- * <p/>
- * Activities containing this fragment MUST implement the {@link Callbacks}
- * interface.
- */
+
 public class NumeroFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    public static NumeroFragment nroFragment = null;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,6 +62,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
     // TODO: Rename and change types of parameters
     public static NumeroFragment newInstance(String param1, String param2) {
         NumeroFragment fragment = new NumeroFragment();
+        nroFragment = fragment;
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -86,6 +82,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         // TODO: Change Adapter to display your content
         mAdapter = new ArrayAdapter<DummyContent.DummyItem>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
+
     }
 
     @Override
@@ -94,19 +91,28 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         View view = inflater.inflate(R.layout.fragment_numero, container, false);
         view.requestLayout();
         // Set the adapter
-        mListView = (AbsListView) view.findViewById(android.R.id.list);
+        mListView = (ListView) view.findViewById(android.R.id.list);
+
         mListView.setAdapter(mAdapter);
+        mListView.invalidate();
 
         // Set OnItemClickListener so we can be notified on item clicks
-        //mListView.setOnItemClickListener(this);
+        mListView.setOnItemClickListener(this);
 
         return view;
+    }
+
+    public void Actualizar() {
+        mListView = (ListView) this.getActivity().findViewById(android.R.id.list);
+        if (mAdapter != null && mListView != null)
+            mListView.setAdapter(mAdapter);
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-    /*    try {
+
+        /*try {
             mListener = (OnFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
@@ -127,6 +133,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
             // Notify the active callbacks interface (the activity, if the
             // fragment is attached to one) that an item has been selected.
             mListener.onFragmentInteraction(DummyContent.ITEMS.get(position).id);
+
         }
     }
 
@@ -157,7 +164,5 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
         // TODO: Update argument type and name
         void onFragmentInteraction(String id);
     }
-
-
 
 }

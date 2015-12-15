@@ -23,14 +23,7 @@ public class DummyContent {
      */
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
-    /*
-        static {
-            // Add 3 sample items.
-            addItem(new DummyItem("1","Contenido 1"));
-            addItem(new DummyItem("2","Contenido 2"));
-            addItem(new DummyItem("3","Contenido 3"));
-        }
-    */
+
     public static void removeAllItems() {
         ITEMS.clear();
         ITEM_MAP.clear();
