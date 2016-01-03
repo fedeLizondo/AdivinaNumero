@@ -29,11 +29,6 @@ public class DummyContent {
         ITEM_MAP.clear();
     }
 
-    private static void addItem(DummyItem item) {
-        ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
-    }
-
     public static void addI(DummyItem i) {
         ITEMS.add(i);
         ITEM_MAP.put(i.id, i);
