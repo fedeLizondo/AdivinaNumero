@@ -56,5 +56,6 @@
     <string name="intentoY"> Y </string>
     <string name="intentoRegular"> Regular </string>
     <string name="darsePorVencido">El número era </string>
+    <string name="background_image_for_relax">Background image for relax</string>
 
 </resources>

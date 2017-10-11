@@ -353,8 +353,6 @@ public class gameActivity extends ActionBarActivity implements ActionBar.TabList
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_game, container, false);
-
-
             return rootView;
         }
     }

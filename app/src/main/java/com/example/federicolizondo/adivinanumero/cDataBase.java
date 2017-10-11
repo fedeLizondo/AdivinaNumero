@@ -22,7 +22,7 @@ public class cDataBase extends SQLiteOpenHelper {
     private static final String COLUMNA_3 = "nombre";
 
 
-    String sqlCreate = "CREATE TABLE " + TABLE_NAME + " ( " + COLUMNA_0 + " INTEGER AUTOINCREMENT NOT NULL, " + COLUMNA_1 + " INTEGER, " + COLUMNA_2 + " INTEGER, " + COLUMNA_3 + " TEXT NULL);";
+    String sqlCreate = "CREATE TABLE " + TABLE_NAME + " ( " + COLUMNA_0 + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMNA_1 + " INTEGER, " + COLUMNA_2 + " INTEGER, " + COLUMNA_3 + " TEXT NULL);";
 
 
     public cDataBase(Context context) {

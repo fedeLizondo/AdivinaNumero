@@ -1,6 +1,8 @@
 package com.example.federicolizondo.adivinanumero;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -84,6 +86,7 @@ public class NumeroFragment extends Fragment implements AbsListView.OnItemClickL
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS);
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -198,7 +198,7 @@
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#3DFFFFFF"
+            android:background="#77FF0000"
             android:onClick="volverGameActivity"
             android:text="@string/volver" />
 

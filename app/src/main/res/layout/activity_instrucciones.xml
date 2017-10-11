@@ -8,7 +8,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scaleType="center"
-        android:src="@drawable/fondo" />
+        android:src="@drawable/fondo"
+        android:contentDescription="@string/background_image_for_relax" />
 
     <LinearLayout
 
@@ -28,7 +29,7 @@
             android:gravity="center"
             android:text="@string/nombreJuego"
             android:textColor="#BFFFFFFF"
-            android:textSize="@dimen/abc_text_size_headline_material" />
+            android:textSize="@dimen/tam_titulos" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +41,7 @@
             android:gravity="center"
             android:text="@string/instrucciones"
             android:textColor="#d5000000"
-            android:textSize="@dimen/abc_text_size_subhead_material" />
+            android:textSize="@dimen/tam_sub_titulos"  />
 
         <TextView
             android:id="@+id/Txt_Puntajes"
@@ -48,12 +49,12 @@
             android:layout_height="0dp"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:padding="8dp"
             android:layout_weight="7"
             android:background="#0F000000"
             android:scrollbars="vertical"
             android:text="@string/wInstruccion"
-            android:textSize="14sp"
-
+            android:textSize="@android:style/TextAppearance.Medium"
             android:textStyle="bold"
             android:typeface="normal" />
 
@@ -63,7 +64,7 @@
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#3DFFFFFF"
+            android:background="#AA32CD32"
             android:onClick="volverInstrucciones"
             android:text="@string/volver" />
     </LinearLayout>
